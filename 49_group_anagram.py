@@ -21,17 +21,28 @@ def valid_anag(strs):
             d.get(x).append(strs[i])
             
             
-    return d
+    return d.values()
         
 
+def group_ana(strs):
+    res=[];a=[]
+    for i in range(len(strs)):
+        for j in range(i+1,len(strs)):
+            if sorted(strs[i])==sorted(strs[i]):
+                a.append(strs[i])
+            print(a)
+   
     
-print(valid_anag(l))
-dict_s={
-    'name':'samayun',
-    'name':'pranto',
-    'age': 23
-}
-print(dict_s)
+        
+
+# print(valid_anag(l))
+print(group_ana(l))
+# dict_s={
+#     'name':'samayun',
+#     'name':'pranto',
+#     'age': 23
+# }
+# print(dict_s)
 
 # strin='print'
 # c=sorted(strin)

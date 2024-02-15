@@ -1,11 +1,11 @@
-def logestest_word(nums):
-    length=len(nums);n=''
-    for i in range(length):
-        for j in nums[i]:
-            print(j)
-            if j in n[i]:
-                print(nums[i])
-                n+=j
-    return n
-ls=['flow','flaws','flat']
-print(logestest_word(ls))
+def logestest_word(strs):
+    res=sorted(strs)
+    ans=''
+    fast=res[0];last=res[-1]
+    for i in range(min(len(fast),len(last))):
+        if fast[i]!=last[i]:
+            return ans
+        ans+=fast[i]
+    
+strs=['rlow','flaws','flat']
+print(logestest_word(strs))
