@@ -1,5 +1,8 @@
+from collections import Counter
 def majority(nums):
-    return list(set([i for i in nums if nums.count(i)>len(nums)//3]))
+    k=len(nums)//3
+    d=Counter(nums)
+    return [i for i,j in d.items() if j>k]
     # k=len(nums)/3
     # d={};res=[]
     # for i in nums:
@@ -14,5 +17,5 @@ def majority(nums):
 
 
 
-nums = [2,3,4]
+nums = [3,2,3]
 print(majority(nums))
